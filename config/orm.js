@@ -49,7 +49,6 @@ const orm = {
         cb(result);
         });
     },
-
 };
 
 const printQuestionMarks = (num) => {

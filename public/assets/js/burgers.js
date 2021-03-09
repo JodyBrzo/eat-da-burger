@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             const newDevour = e.target.getAttribute('data-newburger');
     
             const newDevourState = {
-              devour: newDevour,
+              devoured: newDevour,
             };
     
             fetch(`/api/burgers/${id}`, {
@@ -38,13 +38,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
       }
       const createDevourBtn = document.getElementById('create-form');
 
-  if (createCatBtn) {
-    createCatBtn.addEventListener('submit', (e) => {
+  if (createDevourBtn) {
+    createDevourBtn.addEventListener('submit', (e) => {
       e.preventDefault();
 
       const newBurger = {
         burger_name: document.getElementById('ba').value.trim(),
-        devour: document.getElementById('devoured').checked,
+        devoured: false,
       };
 
       fetch('/api/burgers', {
@@ -62,27 +62,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
         location.reload();
       });
     });
-  }
-
-  // DELETE
-  const deleteBurgerBtns = document.querySelectorAll('.delete-burger');
-
-  // Set up the event listeners for each delete button
-  deleteBurgerBtns.forEach((button) => {
-    button.addEventListener('click', (e) => {
-      const id = e.target.getAttribute('data-id');
-
-      // Send the delete request
-      fetch(`/api/burgers/${id}`, {
-        method: 'DELETE',
-      }).then((res) => {
-        console.log(res);
-        console.log(`Deleted burger: ${id}`);
-
-        // Reload the page
-        location.reload();
-      });
-    });
-  });
-  
+  }  
 });
