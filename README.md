@@ -1,7 +1,7 @@
 ![license](https://img.shields.io/static/v1?label=license&message=MIT&color=brightgreen)
 
 # eat-da-burger
- Restaurant app that lets users input the names of burgers they'd like to eat.  This is a simple MVC Express app using MySQL that lets you add names of burgers you would like to eat.  Once you've eaten the burger you can click "Devour it" to add the burger to the "Burgers you've eaten" list.  From that list you can click the "Eat Again" button to add the burger back to the "Burgers to eat" list.
+This is a simple MVC Express app using MySQL that lets you add names of burgers you would like to eat.  Once you've eaten the burger you can click "Devour it" to add the burger to the "Burgers you've eaten" list.  From that list you can click the "Eat Again" button to add the burger back to the "Burgers to eat" list.
 
 
 ![SAMPLE](public/assets/img/mockup.gif)
